@@ -1,0 +1,45 @@
+package HandMCart;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class cart_01 {
+	public static void main(String args[]) throws InterruptedException
+	{
+	
+	
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www2.hm.com/en_in/index.html");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//a[@class='menu__super-link']//span[contains(text(),'Baby')]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//li[1]//ul[1]//li[5]//a[1]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//main[@id='main-content']//li[3]//ul[1]//li[5]//a[1]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//li[1]//article[1]//div[2]//h3[1]//a[1]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//button[contains(@class,'picker-trigger js-picker-trigger small')]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//span[normalize-space()='4-6M']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//span[@class='icon icon-shopping-bag-white']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//span[@class='shoppingbag-item-count']")).click();
+		Thread.sleep(2000);
+
+}
+}
